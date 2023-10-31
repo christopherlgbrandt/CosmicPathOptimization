@@ -4,8 +4,8 @@ import sys
 
 try:
     numReadings = input()
-    numReadings =  numReadings.strip()
-    
+    numReadings = numReadings.strip()
+
     if numReadings.isdigit():
         numReadings = int(numReadings)
     else:
