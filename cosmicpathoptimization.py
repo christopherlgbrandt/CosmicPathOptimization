@@ -14,12 +14,17 @@ except ValueError:
     sys.exit()
 
 averageReading = 0
-reading = input()
-tempReadings = reading.split()
-if (numReadings != len(tempReadings)):
+try:
+    reading = input()
+    tempReadings = reading.split()
+    if (numReadings != len(tempReadings)):
+        sys.exit()
+    for reading in tempReadings:
+        if reading.isdigit():
+            averageReading = averageReading + int(reading)
+        else:
+            sys.exit()
+except ValueError:
     sys.exit()
-
-for reading in tempReadings:
-    averageReading = averageReading + int(reading)
 
 print(averageReading//numReadings)
